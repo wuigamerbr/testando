@@ -5,5 +5,12 @@ char descricao[300];
 } Tarefa;
 
 typedef enum Erro {
-OK, ABRIR, FECHAR, LER, ESCREVER, MAX_TAREFAS, SEM_TAREFAS
+OK, 
+ABRIR, 
+FECHAR, 
+LER, 
+ESCREVER, 
+MAX_TAREFAS, 
+SEM_TAREFAS,
+NAO_ENCONTRADO
 } Erro;
