@@ -27,7 +27,12 @@ Erro deletar(Tarefa t[], int *pos){
   return OK;
 }
 Erro listar(Tarefa t[], int pos){
-  printf("funcao listar tarefa");
+  if(pos == 0)
+    return SEM_TAREFAS;
+
+  for(int i = 0; i < pos; i++)
+    printTarefa(t[i]);
+  
   return OK;
 }
 Erro salvar(Tarefa t[], int pos, int tamanho){
