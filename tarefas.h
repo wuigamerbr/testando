@@ -4,6 +4,8 @@ char categoria[100];
 char descricao[300];
 } Tarefa;
 
+#define TOTAL 100
+
 typedef enum Erro {
 OK, 
 ABRIR, 
@@ -21,3 +23,8 @@ Erro listar(Tarefa t[], int pos);
 
 Erro salvar(Tarefa t[], int pos, int tamanho);
 Erro carregar(Tarefa t[], int *pos, int tamanho);
+
+void printTarefa(Tarefa t);
+
+void clearBuffer();
+

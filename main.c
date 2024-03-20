@@ -3,7 +3,7 @@
 int main() {
   int opcao;
   do{
-    printf("\nMenu princoapal\n");
+    printf("\nMenu principal\n");
     printf("1 - Criar tarefa\n");
     printf("2 - Deletar tarefas\n");
     printf("3 - Listar tarefas\n");
