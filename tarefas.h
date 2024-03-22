@@ -1,20 +1,20 @@
-typedef struct Tarefa{
-int prioridade;
-char categoria[100];
-char descricao[300];
-} Tarefa;
-
 #define TOTAL 100
 
+typedef struct Tarefa {
+  int prioridade;
+  char categoria[100];
+  char descricao[300];
+} Tarefa;
+
 typedef enum Erro {
-OK, 
-ABRIR, 
-FECHAR, 
-LER, 
-ESCREVER, 
-MAX_TAREFAS, 
-SEM_TAREFAS,
-NAO_ENCONTRADO
+  OK,
+  ABRIR,
+  FECHAR,
+  LER,
+  ESCREVER,
+  MAX_TAREFAS,
+  SEM_TAREFAS,
+  NAO_ENCONTRADO
 } Erro;
 
 Erro criar(Tarefa t[], int *pos);
@@ -25,6 +25,4 @@ Erro salvar(Tarefa t[], int pos, int tamanho);
 Erro carregar(Tarefa t[], int *pos, int tamanho);
 
 void printTarefa(Tarefa t, int pos);
-
 void clearBuffer();
-
