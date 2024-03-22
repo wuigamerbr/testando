@@ -21,14 +21,24 @@ int main() {
     printf("Opcao escolhida: %d\n", opcao);
 
     if (opcao == 1) {
-      criar(tarefas, &pos);
+      e = criar(tarefas, &pos);
+      if(e == MAX_TAREFAS)
+        printf("Maximo de tarefas atingido\n");
+
     } else if (opcao == 2) {
-      deletar(tarefas, &pos);
+      e = deletar(tarefas, &pos);
+      if(e == SEM_TAREFAS)
+        printf("Tarefa nao encontrada\n");
     } else if (opcao == 3) {
+      e = listar(tarefas, &pos);
+      if(e == SEM_TAREFAS)
+        printf("Nao ha tarefas\n");
       listar(tarefas, pos);
     } else if (opcao == 0)
       printf("Sair...\n");
-      salvar(tarefas, pos, TOTAL);
+      e = salvar(tarefas, pos, TOTAL);
+      if(e == ABRIR || e == ESCREVER || e == FECHAR)
+        printf("Erro ao salvar tarefas\n");
     else
       printf("Opcao invalida\n");
 
