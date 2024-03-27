@@ -12,10 +12,12 @@ Erro criar(Tarefa t[], int *pos) {
 
   printf("Entre com a descricao: ");
   fgets(t[*pos].descricao, 300, stdin);
+  f[*pos].descricao[strcspn(f[*pos].descricao, "\n")] = '\0';
   //clearBuffer();
 
   printf("Entre com a categoria: ");
   fgets(t[*pos].categoria, 100, stdin);
+  f[*pos].categoria[strcspn(f[*pos].categoria, "\n")] = '\0';
 
   // printTarefa(t[*pos]);
   *pos = *pos + 1;

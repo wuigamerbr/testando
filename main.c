@@ -9,6 +9,7 @@ int main() {
   Erro e = carregar(tarefas, &pos, TOTAL);
   if(e == ABRIR || e == LER || e == FECHAR)
     pos = 0;
+    printf("Arquivo não encontrado\n")
 
   do {
     printf("\nMenu principal\n");
@@ -37,8 +38,12 @@ int main() {
     } else if (opcao == 0)
       printf("Sair...\n");
       e = salvar(tarefas, pos, TOTAL);
-      if(e == ABRIR || e == ESCREVER || e == FECHAR)
-        printf("Erro ao salvar tarefas\n");
+      if(e == LER || e == FECHAR)
+        printf("Erro ao ler as tarefas do arquivo\n");
+      else if (e == ABRIR){
+        pos = 0;
+        printf("Arquivo não encontrado\n")
+      }
     else
       printf("Opcao invalida\n");
 
